@@ -1,5 +1,3 @@
-// Code needs to be updated, kindly wait for the next release.
-
 <!DOCTYPE html>
 <html>
 
@@ -13,125 +11,121 @@
 <body>
 <div class="heading">
     <h1><center>Carbon Footprint Calculator</center></h1> <br>
-    <label><center>This calculator was created as the pre-existing Carbon Footprint calculators appeared to have a limitation with their criteria in their calculations.<br>
-    Additionally, such calculators would not allow users to add/remove specific activities to/from the calculator's criteria as they were not OpenSource.<br>
-    This lack of freedom to modify the criteria as per user's needs, would make the results incomplete and inaccurate.<br>
-    This is how the creation of this Carbon Footprint Calculator came into being where we welcome all to make positive modifications to help make it even better.<br><br>For now, Let's find <b>your</b> Carbon Footprint!</center></label>
-    
+
     <h2><center><u>Round 1: Domestic Consumptions!</center></u></h2> <br>
-    
-  <div class="questions">
-    <label>Q1. How much do you travel by <b>AC</b> Km/Month?</label><br>
-    <input type="text" id="AC" oninput="validateACInput()" required>
-    <span id="ACError" style="color: red;"></span>
-  </div>
-  <br>
-
-  <div class="questions">
-    <label>Q2. How much distance do you travel by <b>ELECTRICITY</b> in Km/Month?</label><br>
-    <input type="text" id="ELECTRICITY" oninput="validateELECInput()" disabled required>
-    <span id="ELECError" style="color: red;"></span>
-  </div>
-  <br>
-
-  <div class="questions">
-    <label>Q3. How much <b>TV</b> do you use kWh/month? (Most TVs use 0.08 to 0.4 kWh/Hour)</label><br>
-    <input type="text" id="TV" oninput="validateTVInput()" disabled required>
-    <span id="TVError" style="color: red;"></span>
-  </div>
-  <br>
-
-  <div class="questions">
-    <label>Q4. How much solar energy do you consume from <b>SOLAR PANELS</b> in kWh/Month?<br>(Most TVs use 0.08 to 0.4 kWh/Hour)</label><br>
-    <input type="text" id="SOLARPANELS" oninput="validateSPInput()" disabled required>
-    <span id="SPError" style="color: red;"></span>
-  </div>
-  <br>
-
-<h2><center><u>Round 2: Resources!</u></center></h2> <br>
-
-  <div class="questions">
-      <label>Q5. How much <b>CNG</b> do you consume Kg/month?</label><br>
-    <input type="text" id="CNG" oninput="validateCNGInput()" disabled required>
-    <span id="CNGError" style="color: red;"></span>
-  </div>
-  <br>
-
-  <div class="questions">
-    <label>Q6. How much <b>PETROL</b> do you consume Litres/month?</label><br>
-    <input type="text" id="PETROL" oninput="validatePETROLInput()" disabled required>
-    <span id="PETROLError" style="color: red;"></span>
-  </div>
-  <br>
-
-  <div class="questions">
-    <label>Q7. How much <b>LPG</b> do you consume Kg/month?</label><br>
-    <input type="text" id="LPG" oninput="validateLPGInput()" disabled required>
-    <span id="LPGError" style="color: red;"></span>
-  </div>
-  <br>
-
-  <div class="questions">
-    <label>Q8. How much <b>DIESEL</b> do you consume Litres/month?</label><br>
-    <input type="text" id="DIESEL" oninput="validateDIESELInput()" disabled required>
-    <span id="DIESELError" style="color: red;"></span>
-  </div>
-  <br>
-
-  <div class="questions">
-    <label>Q9. How much <b>LPGFORVEHICLE</b> do you consume kg/month?</label><br>
-    <input type="text" id="LPGFORVEHICLE" oninput="validateLPGFORVEHICLEInput()" disabled required>
-    <span id="LPGFORVEHICLEError" style="color: red;"></span>
-  </div>
-  <br>
-
-  <div class="questions">
-    <label>Q10. How much <b>COAL</b> do you consume Kg/Month?</label><br>
-    <input type="text" id="COAL" oninput="validateCOALInput()" disabled required>
-    <span id="COALError" style="color: red;"></span>
-  </div>
-  <br>
-
-  <div class="questions">
-    <label>Q11. How much <b>WATER</b> do you consume Litres/month?</label><br>
-    <input type="text" id="WATER" oninput="validateWATERInput()" disabled required>
-    <span id="WATERError" style="color: red;"></span>
-  </div>
-  <br>
-
-  <h2><center><u>Round 3: Food!</u></center></h2> <br>
-
-  <div class="questions">
-    <label>Q12. How much <b>BEEF</b> do you consume Kg/Month?</label><br>
-    <input type="text" id="BEEF" oninput="validateBEEFInput()" disabled required>
-    <span id="BEEFError" style="color: red;"></span>
-  </div>
-  <br>
-
-  <div class="questions">
-    <label>Q13. How much <b>CHICKEN</b> do you consume Kg/Month?</label><br>
-    <input type="text" id="CHICKEN" oninput="validateCHICKENInput()" disabled required>
-    <span id="CHICKENError" style="color: red;"></span>
-  </div>
-  <br>
-
-  <div class="questions">
-    <label>Q14. How many <b>EGGS</b> do you consume Kg/Month?\n(1 eggs = 0.055Kg)</label><br>
-    <input type="text" id="EGGS" oninput="validateEGGSInput()" disabled required>
-    <span id="EGGSError" style="color: red;"></span>
-  </div>
-  <br>
-
-  <div class="questions">
-    <label>15. How much <b>FISH</b> do you consume Kg/Month?</label><br>
-    <input type="text" id="FISH" oninput="validateFISHInput()" disabled required>
-    <span id="FISHError" style="color: red;"></span>
-  </div>
-  <br>
+    <div class="questions">
+      <label>Q1. How much do you travel by <b>AC</b> Km/Month?</label><br>
+      <input type="text" id="AC" oninput="validateACInput()" required>
+      <span id="ACError" style="color: red;"></span>
+    </div>
+    <br>
+  
+    <div class="questions">
+      <label>Q2. How much distance do you travel by <b>ELECTRICITY</b> in Km/Month?</label><br>
+      <input type="text" id="ELECTRICITY" oninput="validateELECInput()" disabled required>
+      <span id="ELECError" style="color: red;"></span>
+    </div>
+    <br>
+  
+    <div class="questions">
+      <label>Q3. How much <b>TV</b> do you use kWh/month? (Most TVs use 0.08 to 0.4 kWh/Hour)</label><br>
+      <input type="text" id="TV" oninput="validateTVInput()" disabled required>
+      <span id="TVError" style="color: red;"></span>
+    </div>
+    <br>
+  
+    <div class="questions">
+      <label>Q4. How much solar energy do you consume from <b>SOLAR PANELS</b> in kWh/Month?<br>(Most TVs use 0.08 to 0.4 kWh/Hour)</label><br>
+      <input type="text" id="SOLARPANELS" oninput="validateSPInput()" disabled required>
+      <span id="SPError" style="color: red;"></span>
+    </div>
+    <br>
+  
+  <h2><center><u>Round 2: Resources!</u></center></h2> <br>
+  
+    <div class="questions">
+        <label>Q5. How much <b>CNG</b> do you consume Kg/month?</label><br>
+      <input type="text" id="CNG" oninput="validateCNGInput()" disabled required>
+      <span id="CNGError" style="color: red;"></span>
+    </div>
+    <br>
+  
+    <div class="questions">
+      <label>Q6. How much <b>PETROL</b> do you consume Litres/month?</label><br>
+      <input type="text" id="PETROL" oninput="validatePETROLInput()" disabled required>
+      <span id="PETROLError" style="color: red;"></span>
+    </div>
+    <br>
+  
+    <div class="questions">
+      <label>Q7. How much <b>LPG</b> do you consume Kg/month?</label><br>
+      <input type="text" id="LPG" oninput="validateLPGInput()" disabled required>
+      <span id="LPGError" style="color: red;"></span>
+    </div>
+    <br>
+  
+    <div class="questions">
+      <label>Q8. How much <b>DIESEL</b> do you consume Litres/month?</label><br>
+      <input type="text" id="DIESEL" oninput="validateDIESELInput()" disabled required>
+      <span id="DIESELError" style="color: red;"></span>
+    </div>
+    <br>
+  
+    <div class="questions">
+      <label>Q9. How much <b>LPGFORVEHICLE</b> do you consume kg/month?</label><br>
+      <input type="text" id="LPGFORVEHICLE" oninput="validateLPGFORVEHICLEInput()" disabled required>
+      <span id="LPGFORVEHICLEError" style="color: red;"></span>
+    </div>
+    <br>
+  
+    <div class="questions">
+      <label>Q10. How much <b>COAL</b> do you consume Kg/Month?</label><br>
+      <input type="text" id="COAL" oninput="validateCOALInput()" disabled required>
+      <span id="COALError" style="color: red;"></span>
+    </div>
+    <br>
+  
+    <div class="questions">
+      <label>Q11. How much <b>WATER</b> do you consume Litres/month?</label><br>
+      <input type="text" id="WATER" oninput="validateWATERInput()" disabled required>
+      <span id="WATERError" style="color: red;"></span>
+    </div>
+    <br>
+  
+    <h2><center><u>Round 3: Food!</u></center></h2> <br>
+  
+    <div class="questions">
+      <label>Q12. How much <b>BEEF</b> do you consume Kg/Month?</label><br>
+      <input type="text" id="BEEF" oninput="validateBEEFInput()" disabled required>
+      <span id="BEEFError" style="color: red;"></span>
+    </div>
+    <br>
+  
+    <div class="questions">
+      <label>Q13. How much <b>CHICKEN</b> do you consume Kg/Month?</label><br>
+      <input type="text" id="CHICKEN" oninput="validateCHICKENInput()" disabled required>
+      <span id="CHICKENError" style="color: red;"></span>
+    </div>
+    <br>
+  
+    <div class="questions">
+      <label>Q14. How many <b>EGGS</b> do you consume Kg/Month?\n(1 eggs = 0.055Kg)</label><br>
+      <input type="text" id="EGGS" oninput="validateEGGSInput()" disabled required>
+      <span id="EGGSError" style="color: red;"></span>
+    </div>
+    <br>
+  
+    <div class="questions">
+      <label>15. How much <b>FISH</b> do you consume Kg/Month?</label><br>
+      <input type="text" id="FISH" oninput="validateFISHInput()" disabled required>
+      <span id="FISHError" style="color: red;"></span>
+    </div>
+    <br>
+  
 
   <div class="questions">
     <label>Q16. How much <b>MUTTON</b> do you consume Kg/Month?</label><br>
-    <input type="text" id="MUTTON" oninput="validateMUTTONInput()" disabled required>
+    <input type="text" id="MUTTON" oninput="validateMUTTONInput()" required>
     <span id="MUTTONError" style="color: red;"></span>
   </div>
   <br>
@@ -239,14 +233,14 @@
       if (ACInput !== "") {
         if (!isPositiveInteger(ACInput)) {
           document.getElementById("ACError").textContent = "Please only enter a positive integer.";
-          document.getElementById("AC").disabled = true;
+          document.getElementById("ELECTRICITY").disabled = true;
         } else {
           document.getElementById("ACError").textContent = "";
-          document.getElementById("AC").disabled = false;
+          document.getElementById("ELECTRICITY").disabled = false;
         }
       } else {
         document.getElementById("ACError").textContent = "";
-        document.getElementById("AC").disabled = true;
+        document.getElementById("ELECTRICITY").disabled = true;
         document.getElementById("ELECError").textContent = "";
       }
     }
@@ -257,14 +251,14 @@
       if (ELECInput !== "") {
         if (!isPositiveInteger(ELECInput)) {
           document.getElementById("ELECError").textContent = "Please only enter a positive integer.";
-          document.getElementById("ELECTRICITY").disabled = true;
+          document.getElementById("TV").disabled = true;
         } else {
           document.getElementById("ELECError").textContent = "";
-          document.getElementById("ELECTRICITY").disabled = false;
+          document.getElementById("TV").disabled = false;
         }
       } else {
         document.getElementById("ELECError").textContent = "";
-        document.getElementById("ELECTRICITY").disabled = true;
+        document.getElementById("TV").disabled = true;
         document.getElementById("TVError").textContent = "";
       }
     }
@@ -300,8 +294,8 @@
         }
       } else {
         document.getElementById("SPError").textContent = "";
-        document.getElementById("SOLARPANELS").disabled = true;
-        document.getElementById("PETROLError").textContent = "";
+        document.getElementById("CNG").disabled = true;
+        document.getElementById("CNGError").textContent = "";
       }
     }
 
@@ -311,14 +305,14 @@
       if (CNGInput !== "") {
         if (!isPositiveInteger(CNGInput)) {
           document.getElementById("CNGError").textContent = "Please only enter a positive integer.";
-          document.getElementById("CNG").disabled = true;
+          document.getElementById("PETROL").disabled = true;
         } else {
           document.getElementById("CNGError").textContent = "";
-          document.getElementById("CNG").disabled = false;
+          document.getElementById("PETROL").disabled = false;
         }
       } else {
         document.getElementById("CNGError").textContent = "";
-        document.getElementById("CNG").disabled = true;
+        document.getElementById("PETROL").disabled = true;
         document.getElementById("PETROLError").textContent = "";
       }
     }
@@ -329,14 +323,14 @@
       if (PETROLInput !== "") {
         if (!isPositiveInteger(PETROLInput)) {
           document.getElementById("PETROLError").textContent = "Please only enter a positive integer.";
-          document.getElementById("PETROL").disabled = true;
+          document.getElementById("LPG").disabled = true;
         } else {
           document.getElementById("PETROLError").textContent = "";
-          document.getElementById("PETROL").disabled = false;
+          document.getElementById("LPG").disabled = false;
         }
       } else {
         document.getElementById("PETROLError").textContent = "";
-        document.getElementById("PETROL").disabled = true;
+        document.getElementById("LPG").disabled = true;
         document.getElementById("LPGError").textContent = "";
       }
     }
@@ -347,14 +341,14 @@
       if (LPGInput !== "") {
         if (!isPositiveInteger(LPGInput)) {
           document.getElementById("LPGError").textContent = "Please only enter a positive integer.";
-          document.getElementById("LPG").disabled = true;
+          document.getElementById("DIESEL").disabled = true;
         } else {
           document.getElementById("LPGError").textContent = "";
-          document.getElementById("LPG").disabled = false;
+          document.getElementById("DIESEL").disabled = false;
         }
       } else {
         document.getElementById("LPGError").textContent = "";
-        document.getElementById("LPG").disabled = true;
+        document.getElementById("DIESEL").disabled = true;
         document.getElementById("DIESELError").textContent = "";
       }
     }
@@ -365,14 +359,14 @@
       if (DIESELInput !== "") {
         if (!isPositiveInteger(DIESELInput)) {
           document.getElementById("DIESELError").textContent = "Please only enter a positive integer.";
-          document.getElementById("DIESEL").disabled = true;
+          document.getElementById("LPGFORVEHICLE").disabled = true;
         } else {
           document.getElementById("DIESELError").textContent = "";
-          document.getElementById("DIESEL").disabled = false;
+          document.getElementById("LPGFORVEHICLE").disabled = false;
         }
       } else {
         document.getElementById("DIESELError").textContent = "";
-        document.getElementById("DIESEL").disabled = true;
+        document.getElementById("LPGFORVEHICLE").disabled = true;
         document.getElementById("LPGFORVEHICLEError").textContent = "";
       }
     }
@@ -383,14 +377,14 @@
       if (LPGFORVEHICLEInput !== "") {
         if (!isPositiveInteger(LPGFORVEHICLEInput)) {
           document.getElementById("LPGFORVEHICLEError").textContent = "Please only enter a positive integer.";
-          document.getElementById("LPGFORVEHICLE").disabled = true;
+          document.getElementById("COAL").disabled = true;
         } else {
           document.getElementById("LPGFORVEHICLEError").textContent = "";
-          document.getElementById("LPGFORVEHICLE").disabled = false;
+          document.getElementById("COAL").disabled = false;
         }
       } else {
         document.getElementById("LPGFORVEHICLEError").textContent = "";
-        document.getElementById("LPGFORVEHICLE").disabled = true;
+        document.getElementById("COAL").disabled = true;
         document.getElementById("COALError").textContent = "";
       }
     }
@@ -401,14 +395,14 @@
       if (COALInput !== "") {
         if (!isPositiveInteger(COALInput)) {
           document.getElementById("COALError").textContent = "Please only enter a positive integer.";
-          document.getElementById("COAL").disabled = true;
+          document.getElementById("WATER").disabled = true;
         } else {
           document.getElementById("COALError").textContent = "";
-          document.getElementById("COAL").disabled = false;
+          document.getElementById("WATER").disabled = false;
         }
       } else {
         document.getElementById("COALError").textContent = "";
-        document.getElementById("COAL").disabled = true;
+        document.getElementById("WATER").disabled = true;
         document.getElementById("WATERError").textContent = "";
       }
     }
@@ -419,32 +413,32 @@
       if (WATERInput !== "") {
         if (!isPositiveInteger(WATERInput)) {
           document.getElementById("WATERError").textContent = "Please only enter a positive integer.";
-          document.getElementById("WATER").disabled = true;
+          document.getElementById("BEEF").disabled = true;
         } else {
           document.getElementById("WATERError").textContent = "";
-          document.getElementById("WATER").disabled = false;
+          document.getElementById("BEEF").disabled = false;
         }
       } else {
         document.getElementById("WATERError").textContent = "";
-        document.getElementById("WATER").disabled = true;
+        document.getElementById("BEEF").disabled = true;
         document.getElementById("BEEFError").textContent = "";
       }
     }
 
     function validateBEEFInput() {
-      var BEEFInput = document.getElementById("SOLARPANELS").value;
+      var BEEFInput = document.getElementById("BEEF").value;
 
       if (BEEFInput !== "") {
         if (!isPositiveInteger(BEEFInput)) {
           document.getElementById("BEEFError").textContent = "Please only enter a positive integer.";
-          document.getElementById("BEEF").disabled = true;
+          document.getElementById("CHICKEN").disabled = true;
         } else {
           document.getElementById("BEEFError").textContent = "";
-          document.getElementById("BEEF").disabled = false;
+          document.getElementById("CHICKEN").disabled = false;
         }
       } else {
         document.getElementById("BEEFError").textContent = "";
-        document.getElementById("BEEF").disabled = true;
+        document.getElementById("CHICKEN").disabled = true;
         document.getElementById("CHICKENError").textContent = "";
       }
     }
@@ -455,14 +449,14 @@
       if (CHICKENInput !== "") {
         if (!isPositiveInteger(CHICKENInput)) {
           document.getElementById("CHICKENError").textContent = "Please only enter a positive integer.";
-          document.getElementById("CHICKEN").disabled = true;
+          document.getElementById("EGGS").disabled = true;
         } else {
           document.getElementById("CHICKENError").textContent = "";
-          document.getElementById("CHICKEN").disabled = false;
+          document.getElementById("EGGS").disabled = false;
         }
       } else {
         document.getElementById("CHICKENError").textContent = "";
-        document.getElementById("CHICKEN").disabled = true;
+        document.getElementById("EGGS").disabled = true;
         document.getElementById("EGGSError").textContent = "";
       }
     }
@@ -473,14 +467,14 @@
       if (EGGSInput !== "") {
         if (!isPositiveInteger(EGGSInput)) {
           document.getElementById("EGGSError").textContent = "Please only enter a positive integer.";
-          document.getElementById("EGGS").disabled = true;
+          document.getElementById("FISH").disabled = true;
         } else {
           document.getElementById("EGGSError").textContent = "";
-          document.getElementById("EGGS").disabled = false;
+          document.getElementById("FISH").disabled = false;
         }
       } else {
         document.getElementById("EGGSError").textContent = "";
-        document.getElementById("EGGS").disabled = true;
+        document.getElementById("FISH").disabled = true;
         document.getElementById("FISHError").textContent = "";
       }
     }
@@ -491,14 +485,14 @@
       if (FISHInput !== "") {
         if (!isPositiveInteger(FISHInput)) {
           document.getElementById("FISHError").textContent = "Please only enter a positive integer.";
-          document.getElementById("FISH").disabled = true;
+          document.getElementById("MUTTON").disabled = true;
         } else {
           document.getElementById("FISHError").textContent = "";
-          document.getElementById("FISH").disabled = false;
+          document.getElementById("MUTTON").disabled = false;
         }
       } else {
         document.getElementById("FISHError").textContent = "";
-        document.getElementById("FISH").disabled = true;
+        document.getElementById("MUTTON").disabled = true;
         document.getElementById("MUTTONError").textContent = "";
       }
     }
@@ -507,16 +501,16 @@
       var MUTTONInput = document.getElementById("MUTTON").value;
 
       if (MUTTONInput !== "") {
-        if (!isPositiveInteger(SPInput)) {
+        if (!isPositiveInteger(MUTTONInput)) {
           document.getElementById("MUTTONError").textContent = "Please only enter a positive integer.";
-          document.getElementById("MUTTON").disabled = true;
+          document.getElementById("PORK").disabled = true;
         } else {
           document.getElementById("MUTTONError").textContent = "";
-          document.getElementById("MUTTON").disabled = false;
+          document.getElementById("PORK").disabled = false;
         }
       } else {
         document.getElementById("MUTTONError").textContent = "";
-        document.getElementById("MUTTON").disabled = true;
+        document.getElementById("PORK").disabled = true;
         document.getElementById("PORKError").textContent = "";
       }
     }
@@ -527,14 +521,14 @@
       if (PORKInput !== "") {
         if (!isPositiveInteger(PORKInput)) {
           document.getElementById("PORKError").textContent = "Please only enter a positive integer.";
-          document.getElementById("PORK").disabled = true;
+          document.getElementById("VEGETABLES").disabled = true;
         } else {
           document.getElementById("PORKError").textContent = "";
-          document.getElementById("PORK").disabled = false;
+          document.getElementById("VEGETABLES").disabled = false;
         }
       } else {
         document.getElementById("PORKError").textContent = "";
-        document.getElementById("PORK").disabled = true;
+        document.getElementById("VEGETABLES").disabled = true;
         document.getElementById("VEGETABLESError").textContent = "";
       }
     }
@@ -545,14 +539,14 @@
       if (VEGETABLESInput !== "") {
         if (!isPositiveInteger(VEGETABLESInput)) {
           document.getElementById("VEGETABLESError").textContent = "Please only enter a positive integer.";
-          document.getElementById("VEGETABLES").disabled = true;
+          document.getElementById("MILK").disabled = true;
         } else {
           document.getElementById("VEGETABLESError").textContent = "";
-          document.getElementById("VEGETABLES").disabled = false;
+          document.getElementById("MILK").disabled = false;
         }
       } else {
         document.getElementById("VEGETABLESError").textContent = "";
-        document.getElementById("VEGETABLES").disabled = true;
+        document.getElementById("MILK").disabled = true;
         document.getElementById("MILKError").textContent = "";
       }
     }
@@ -563,14 +557,14 @@
       if (MILKInput !== "") {
         if (!isPositiveInteger(MILKInput)) {
           document.getElementById("MILKError").textContent = "Please only enter a positive integer.";
-          document.getElementById("MILK").disabled = true;
+          document.getElementById("FOOD").disabled = true;
         } else {
           document.getElementById("MILKError").textContent = "";
-          document.getElementById("MILK").disabled = false;
+          document.getElementById("FOOD").disabled = false;
         }
       } else {
         document.getElementById("MILKError").textContent = "";
-        document.getElementById("MILK").disabled = true;
+        document.getElementById("FOOD").disabled = true;
         document.getElementById("FOODError").textContent = "";
       }
     }
@@ -581,14 +575,14 @@
       if (FOODInput !== "") {
         if (!isPositiveInteger(FOODInput)) {
           document.getElementById("FOODError").textContent = "Please only enter a positive integer.";
-          document.getElementById("FOOD").disabled = true;
+          document.getElementById("COCACOLA").disabled = true;
         } else {
           document.getElementById("FOODError").textContent = "";
-          document.getElementById("FOOD").disabled = false;
+          document.getElementById("COCACOLA").disabled = false;
         }
       } else {
         document.getElementById("FOODError").textContent = "";
-        document.getElementById("FOOD").disabled = true;
+        document.getElementById("COCACOLA").disabled = true;
         document.getElementById("COCACOLAError").textContent = "";
       }
     }
@@ -599,14 +593,14 @@
       if (COCACOLAInput !== "") {
         if (!isPositiveInteger(COCACOLAInput)) {
           document.getElementById("COCACOLAError").textContent = "Please only enter a positive integer.";
-          document.getElementById("COCACOLA").disabled = true;
+          document.getElementById("COOKINGOIL").disabled = true;
         } else {
           document.getElementById("COCACOLAError").textContent = "";
-          document.getElementById("COCACOLA").disabled = false;
+          document.getElementById("COOKINGOIL").disabled = false;
         }
       } else {
         document.getElementById("COCACOLAError").textContent = "";
-        document.getElementById("COCACOLA").disabled = true;
+        document.getElementById("COOKINGOIL").disabled = true;
         document.getElementById("COOKINGOILError").textContent = "";
       }
     }
@@ -617,14 +611,14 @@
       if (COOKINGOILInput !== "") {
         if (!isPositiveInteger(COOKINGOILInput)) {
           document.getElementById("COOKINGOILError").textContent = "Please only enter a positive integer.";
-          document.getElementById("COOKINGOIL").disabled = true;
+          document.getElementById("MOTORCYCLE").disabled = true;
         } else {
           document.getElementById("COOKINGOILError").textContent = "";
-          document.getElementById("COOKINGOIL").disabled = false;
+          document.getElementById("MOTORCYCLE").disabled = false;
         }
       } else {
         document.getElementById("COOKINGOILError").textContent = "";
-        document.getElementById("COOKINGOIL").disabled = true;
+        document.getElementById("MOTORCYCLE").disabled = true;
         document.getElementById("MOTORCYCLEError").textContent = "";
       }
     }
@@ -635,14 +629,14 @@
       if (MOTORCYCLEInput !== "") {
         if (!isPositiveInteger(MOTORCYCLEInput)) {
           document.getElementById("MOTORCYCLEError").textContent = "Please only enter a positive integer.";
-          document.getElementById("MOTORCYCLE").disabled = true;
+          document.getElementById("AEROPLANE").disabled = true;
         } else {
           document.getElementById("MOTORCYCLEError").textContent = "";
-          document.getElementById("MOTORCYCLE").disabled = false;
+          document.getElementById("AEROPLANE").disabled = false;
         }
       } else {
         document.getElementById("MOTORCYCLEError").textContent = "";
-        document.getElementById("MOTORCYCLE").disabled = true;
+        document.getElementById("AEROPLANE").disabled = true;
         document.getElementById("AEROPLANEError").textContent = "";
       }
     }
@@ -653,14 +647,14 @@
       if (AEROPLANEInput !== "") {
         if (!isPositiveInteger(AEROPLANEInput)) {
           document.getElementById("AEROPLANEError").textContent = "Please only enter a positive integer.";
-          document.getElementById("AEROPLANE").disabled = true;
+          document.getElementById("BUS").disabled = true;
         } else {
           document.getElementById("AEROPLANEError").textContent = "";
-          document.getElementById("AEROPLANE").disabled = false;
+          document.getElementById("BUS").disabled = false;
         }
       } else {
         document.getElementById("AEROPLANEError").textContent = "";
-        document.getElementById("AEROPLANE").disabled = true;
+        document.getElementById("BUS").disabled = true;
         document.getElementById("BUSError").textContent = "";
       }
     }
@@ -671,14 +665,14 @@
       if (BUSInput !== "") {
         if (!isPositiveInteger(BUSInput)) {
           document.getElementById("BUSError").textContent = "Please only enter a positive integer.";
-          document.getElementById("BUS").disabled = true;
+          document.getElementById("TRAIN").disabled = true;
         } else {
           document.getElementById("BUSError").textContent = "";
-          document.getElementById("BUS").disabled = false;
+          document.getElementById("TRAIN").disabled = false;
         }
       } else {
         document.getElementById("BUSError").textContent = "";
-        document.getElementById("BUS").disabled = true;
+        document.getElementById("TRAIN").disabled = true;
         document.getElementById("TRAINError").textContent = "";
       }
     }
@@ -689,14 +683,14 @@
       if (TRAINInput !== "") {
         if (!isPositiveInteger(TRAINInput)) {
           document.getElementById("TRAINError").textContent = "Please only enter a positive integer.";
-          document.getElementById("TRAIN").disabled = true;
+          document.getElementById("AUTORICKSHAW").disabled = true;
         } else {
           document.getElementById("TRAINError").textContent = "";
-          document.getElementById("TRAIN").disabled = false;
+          document.getElementById("AUTORICKSHAW").disabled = false;
         }
       } else {
         document.getElementById("TRAINError").textContent = "";
-        document.getElementById("TRAIN").disabled = true;
+        document.getElementById("AUTORICKSHAW").disabled = true;
         document.getElementById("AUTORICKSHAWError").textContent = "";
       }
     }
@@ -707,14 +701,14 @@
       if (AUTORICKSHAWInput !== "") {
         if (!isPositiveInteger(AUTORICKSHAWInput)) {
           document.getElementById("AUTORICKSHAWError").textContent = "Please only enter a positive integer.";
-          document.getElementById("AUTORICKSHAW").disabled = true;
+          document.getElementById("CAR").disabled = true;
         } else {
           document.getElementById("AUTORICKSHAWError").textContent = "";
-          document.getElementById("AUTORICKSHAW").disabled = false;
+          document.getElementById("CAR").disabled = false;
         }
       } else {
         document.getElementById("AUTORICKSHAWError").textContent = "";
-        document.getElementById("AUTORICKSHAW").disabled = true;
+        document.getElementById("CAR").disabled = true;
         document.getElementById("CARError").textContent = "";
       }
     }
@@ -725,14 +719,14 @@
       if (CARInput !== "") {
         if (!isPositiveInteger(CARInput)) {
           document.getElementById("CARError").textContent = "Please only enter a positive integer.";
-          document.getElementById("CAR").disabled = true;
+          document.getElementById("BICYCLE").disabled = true;
         } else {
           document.getElementById("CARError").textContent = "";
-          document.getElementById("CAR").disabled = false;
+          document.getElementById("BICYCLE").disabled = false;
         }
       } else {
         document.getElementById("CARError").textContent = "";
-        document.getElementById("CAR").disabled = true;
+        document.getElementById("BICYCLE").disabled = true;
         document.getElementById("BICYCLEERROR").textContent = "";
       }
     }
@@ -743,14 +737,14 @@
       if (BICYCLEInput !== "") {
         if (!isPositiveInteger(BICYCLEInput)) {
           document.getElementById("BICYCLEERROR").textContent = "Please only enter a positive integer.";
-          document.getElementById("BICYCLE").disabled = true;
+          // document.getElementById("BICYCLE").disabled = true;
         } else {
           document.getElementById("BICYCLEERROR").textContent = "";
-          document.getElementById("BICYCLE").disabled = false;
+          // document.getElementById("BICYCLE").disabled = false;
         }
       } else {
         document.getElementById("BICYCLEERROR").textContent = "";
-        document.getElementById("BICYCLE").disabled = true;
+        // document.getElementById("BICYCLE").disabled = true;
       }
     }
 
@@ -784,7 +778,6 @@
       var AUTORICKSHAWInput = document.getElementById("AUTORICKSHAW").value;
       var CARInput = document.getElementById("CAR").value;
       var BICYCLEInput = document.getElementById("BICYCLE").value;
-
 
       if (!isPositiveInteger(ACInput)) {
         document.getElementById("ACError").textContent = "Please only enter a positive integer.";
@@ -1003,3 +996,5 @@
   </script>
 </body>
 </html>
+
+// Code needs to be updated, kindly wait for the next release. Currently facing the issue of end result being shown as "NAN"
