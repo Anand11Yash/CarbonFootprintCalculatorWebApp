@@ -2,15 +2,29 @@
 <html>
 
 <head>
-  <title><center>Carbon Footprint Calculator</center></title>
+  <title><center>YA's Carbon Footprint Calculator</center></title>
   <style>
-    body {background-color: darkred; color: orange; }    
+    body {background-color: yellowgreen; color: black; font-family: Geneva;}   
+    .hidden {
+      display: none;
+    }
   </style>
 </head>
 
 <body>
+  <center>
+  <div class="heading">
+    <hr><hr><h1>Carbon Footprint Calculator</h1><hr>
+      <button onclick="openText()">Click here to understand this Calculator & Carbon Footprint!</button></center>
+      <p id="text" class="hidden">The lack of flexibility in the existing Carbon Footprint Calculators for modifying criteria, adding and removing specific activities led to the creation of <u>this Calculator</u>,
+        where we welcome all to contribute to this project by making positive modifications for improving its accuracy or for personal use.<br><br>
+        <b>Understanding Carbon Footprint</b><br>
+        Carbon Footprint is the total amount of emissions of Greenhouse gases such as carbon dioxide,  methane, nitrous oxide, hydrochlorofluorocarbons and some other gases, into the environment by our activities or natural activities.<br> <br> 
+        A Carbon Footprint Calculator on the other hand, is a tool which is used to calculate the Carbon Footprint contributed to the environment. Different Calculators give different results based on location.<br><br>For instance, a calculator designed for Americans will not give the same result for Indians, the reason being that there is a difference in Carbon Factors of different activities in different nations.<br><br>
+        For the calculation of Carbon Footprint, it is important to know the consumption of an activity and what its respective Carbon Factor is. Carbon Factors are used as a standard to calculate the emission of various Greenhouse gases per unit of different activities.<br></p>
+    </div><hr>
+
 <div class="heading">
-    <h1><center>Carbon Footprint Calculator</center></h1> <br>
 
     <h2><center><u>Round 1: Domestic Consumptions!</center></u></h2> <br>
     <div class="questions">
@@ -35,11 +49,11 @@
     <br>
   
     <div class="questions">
-      <label>Q4. How much solar energy do you consume from <b>SOLAR PANELS</b> in kWh/Month?<br>(Most TVs use 0.08 to 0.4 kWh/Hour)</label><br>
+      <label>Q4. How much solar energy do you consume from <b>SOLAR PANELS</b> in kWh/Month?</label><br>
       <input type="text" id="SOLARPANELS" oninput="validateSPInput()" disabled required>
       <span id="SPError" style="color: red;"></span>
     </div>
-    <br>
+    <br><hr>
   
   <h2><center><u>Round 2: Resources!</u></center></h2> <br>
   
@@ -90,7 +104,7 @@
       <input type="text" id="WATER" oninput="validateWATERInput()" disabled required>
       <span id="WATERError" style="color: red;"></span>
     </div>
-    <br> 
+    <br> <hr>
   
     <h2><center><u>Round 3: Food!</u></center></h2> <br>
   
@@ -110,7 +124,7 @@
   
   
     <div class="questions">
-      <label>Q14. How many <b>EGGS</b> do you consume Kg/Month?\n(1 eggs = 0.055Kg)</label><br>
+      <label>Q14. How many <b>EGGS</b> do you consume Kg/Month? (1 eggs = 0.055Kg)</label><br>
       <input type="text" id="EGGS" oninput="validateEGGSInput()" disabled required>
       <span id="EGGSError" style="color: red;"></span>
     </div>
@@ -171,7 +185,7 @@
     <input type="text" id="COOKINGOIL" oninput="validateCOOKINGOILInput()" disabled required>
     <span id="COOKINGOILError" style="color: red;"></span>
   </div>
-  <br>
+  <br><hr>
 
   <h2><center><u>Round 4: Traveling!</u></center></h2><br>
 
@@ -222,10 +236,17 @@
     <input type="text" id="BICYCLE" oninput="validateBICYCLEInput()" disabled required>
     <span id="BICYCLEERROR" style="color: red;"></span>
   </div>
-  <br>
+  <br><hr>
 
-  <br><center><button onclick="calculate()">CALCULATE</center></button>
+  <br><center><button onclick="calculate()">Find Your Carbon Footprint</center></button>
   <div class="output" id="result"></div>
+
+  <center>
+    <div class="end">
+      <hr><u><b>More Details</b></u>
+      <div class="documentation">Learn more about Carbon Footprint by reading our <a href="https://docs.google.com/document/d/1xQreU8kJKfRYXW_cn7ZiehrpI8U7v7ijtbIAWY4w9xc/edit">documentation!</a>
+      <div class="GitHub">Want to contribute? Feel free to visit our <a href="https://github.com/Anand11Yash/CarbonFootprintCalculatorWebApp">GitHub Repository!</a>
+  </div><hr><hr></center>
 
   <script>
     function validateACInput() {
@@ -780,6 +801,11 @@
       var CARInput = document.getElementById("CAR").value;
       var BICYCLEInput = document.getElementById("BICYCLE").value;
 
+      if (ACInput === "" || ELECInput === "" || TVInput === "" || SPInput === "" || CNGInput === "" || PETROLInput === "" || LPGInput === "" || DIESELInput === "" || LPGFORVEHICLEInput === "" || COALInput === "" || WATERInput === "" || BEEFInput === "" || CHICKENInput === "" || EGGSInput === "" || FISHInput === "" || MUTTONInput === "" || PORKInput === "" || VEGETABLESInput === "" || MILKInput === "" || FOODInput === "" || COCACOLAInput === "" || COOKINGOILInput === "" || MOTORCYCLEInput === "" || AEROPLANEInput === "" || BUSInput === "" || TRAINInput === "" || AUTORICKSHAWInput === "" || CARInput === "" || BICYCLEInput === "") {
+        document.getElementById("result").textContent = "Please enter correct data in all fields: Please make sure that you are entering positive numbers only and that you are not entering a symbol or alphabet by mistake!";
+        return;
+      }
+
       if (!isPositiveInteger(ACInput)) {
         document.getElementById("ACError").textContent = "Please only enter a positive integer.";
         return;
@@ -987,14 +1013,21 @@
       document.getElementById("CARError").textContent = "";
       document.getElementById("BICYCLEERROR").textContent = "";
 
-      document.getElementById("result").textContent = "Your carbon footprint is " + carbonFootprint.toFixed(29) + " Kg per Month.";
+      document.getElementById("result").textContent = "Your carbon footprint is " + carbonFootprint.toFixed(29) + " Kg per Month. For comparison, Indias Per Capita Carbon Footprint was 1900 Kg/Month in 2021.";
     }
 
     function isPositiveInteger(value) {
-      return /^[0-9]\d*$/.test(value);
+  return /^[0-9]\d*(\.\d+)?$/.test(value);
     }
 
+    function openText() {
+      const text = document.getElementById('text');
+      if (text.style.display === 'none') {
+        text.style.display = 'block';
+      } else {
+        text.style.display = 'none';
+      }
+    }
   </script>
 </body>
 </html>
-
